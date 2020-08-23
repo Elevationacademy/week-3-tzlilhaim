@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handlebars</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="spot-check-1">
+      <p class="organize-exercises">Spot check 1:</p>
+      <div id="class-data"></div>
+      <script id="class-template" type="text/x-handlebars-template">
+        {{#each classmates}}
+          <div>
+            {{name}} - {{description}}
+          </div>
+        {{/each}}
+      </script>
+    </div>
+    <div id="spot-check-2">
+      <p class="organize-exercises">Spot check 2:</p>
+      <div class="menu"></div>
+      <script id="menu-template" type="text/x-handlebars-template">
+        <ul>
+          {{#each menu}}
+            {{#if socialNetwork}}
+              <li>
+                <a href="{{link}}">
+                  {{name}}
+                </a>
+              </li>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </script>
+    </div>
+    <div id="spot-check-3">
+      <p class="organize-exercises">Spot check 3:</p>
+      <div class="chef-choice"></div>
+      <script id="foods-template" type="text/x-handlebars-template">
+        <ul>
+          {{#each foods}}
+            {{#if isChefChoice}}
+              <div class="foods">
+                {{name}} - {{price}}
+              </div>
+            {{/if}}
+          {{/each}}
+        </ul>
+      </script>
+    </div>
+    <div id="spot-check-4">
+      <p class="organize-exercises">Spot check 4:</p>
+      <div id="data"></div>
+      <script id="data-template" type="text/x-handlebars-template">
+        <p>Animals:</p>
+        <ul>
+          {{#each animals}}
+            <li class="animals">
+              {{this}}
+            </li>
+          {{/each}}
+        </ul>
+        <p>Languages:</p>
+        <ul>
+          {{#each languages}}
+            <li class="languages">
+              {{this}}
+            </li>
+          {{/each}}
+        </ul>
+      </script>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
