@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX & Intro to APIs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <div id="search-container" class="box">
+        <div id="search-engine">
+          Get <input type="number" name="quantity" min="1" max="5" value="1" />
+          gifs about
+          <input type="text" placeholder="Get gif about..." />
+          <button>Search</button>
+        </div>
+        <div id="search-result"></div>
+      </div>
+      <div id="favorites-container" class="box">
+        <h3>Favorite Gifs:</h3>
+        <div id="favorites"></div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

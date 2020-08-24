@@ -1,0 +1,46 @@
+#main-container{
+display: grid;
+grid-template-columns: 1fr 15fr 1fr 15fr 1fr;
+grid-template-rows: 1fr 15fr 1fr;
+grid-template-areas:
+". . . . ."
+". s . f ."
+". . . . .";
+height: 100vh;
+width: 100vw;
+}
+
+.box{
+    background-color: lavender;
+    padding: 10px;
+    border: solid 2px black;
+    box-shadow: 5px 5px cornflowerblue;
+    width: 100%;
+    height: 100%;
+}
+
+#search-container{
+    grid-area: s;
+}
+#favorites-container{
+    grid-area: f;
+}
+
+#search-result{
+    margin: 10px;
+}
+
+h3{
+    margin: 0px;
+}
+
+.gif{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.add-gif{
+    display: grid;
+    padding: 50%;
+}
