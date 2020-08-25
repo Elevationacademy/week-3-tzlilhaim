@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My People</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+        <h1>My People</h1>
+      <div id="data"></div>
+    </div>
+    <script id="user-template" type="text/x-handlebars-template">
+      <ul>
+        {{#each results}}
+          <div class="person">
+            <div class="full-name">
+              {{this.name.title}} {{this.name.first}} {{this.name.last}}
+            </div>
+            <div class="email-addr">
+              {{this.email}}
+            </div>
+          </div>
+        {{/each}}
+      </ul>
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

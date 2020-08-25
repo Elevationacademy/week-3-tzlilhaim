@@ -1,0 +1,41 @@
+#container{
+    display: grid;
+    grid-template-rows: 1fr 10fr;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    text-align: center;
+}
+
+#data>ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    align-content: center;
+}
+
+.person{
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 5px;
+    max-width: 350px;
+    box-shadow: 5px 5px gray;
+    margin-bottom: 5px;
+}
+
+.person:hover{
+    background-color: lightblue;
+}
+
+.email-addr{
+    color: darkcyan;
+    display: inline;
+}
+
+.email-addr:hover{
+    color: darkslateblue;
+    cursor: pointer;
+    text-decoration: underline;
+}
