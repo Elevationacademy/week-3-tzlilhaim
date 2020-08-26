@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varta:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="enter-wisdom">
+        <i class="fa fa-exclamation-circle fa-lg"></i>
+        <input type="text" placeholder="Enter words of wisdom..." />
+        <button id="submit"><i class="fas fa-plus-circle"></i>
+        Add</button>
+        <button id="clear-data">
+            <i class="far fa-trash-alt"></i>
+            Clear Data</button>
+      </div>
+      <h1>Words of Wisdom:</h1>
+      <div id="wisdom"></div>
+    </div>
+    <script id="text-template" type="text/x-handlebars-template">
+      {{#each data}}
+        <div class="wisdom-item">
+            <i class="fas fa-minus-circle delete"></i>
+          {{this.text}}
+        </div>
+      {{/each}}
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

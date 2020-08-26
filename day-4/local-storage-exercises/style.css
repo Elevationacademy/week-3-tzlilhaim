@@ -1,0 +1,126 @@
+#container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 10fr;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("file:///Users/tzlilhaim/code/bootcamp/personal-exercises/week-3/week-3-tzlilhaim/day-4/local-storage-exercises/background-img.jpg");
+  background-size: cover;
+  color: black;
+}
+
+h1{
+    font-family: 'Varta', sans-serif;
+    margin-left: 5%;
+    color: rgb(68, 64, 41);
+}
+
+#enter-wisdom {
+  padding: 10px;
+  background-color: rgb(145, 135, 87);
+  display: grid;
+  grid-template-columns: 1fr 10fr 2fr 2fr;
+  grid-template-areas: "alert-icon input btn clear";
+  grid-gap: 5px;
+  position: relative;
+}
+
+#enter-wisdom > i {
+  display: none;
+  grid-area: alert-icon;
+  position: absolute;
+  left: 30%;
+  top: 30%;
+}
+
+#enter-wisdom > input {
+  grid-area: input;
+  padding: 10px;
+  font-family: 'Varta', sans-serif;
+  font-size: large;
+}
+
+#clear-data{
+    grid-area: clear;
+}
+
+#enter-wisdom>button>i{
+    display: none;
+}
+
+#submit{
+  grid-area: btn;
+}
+
+#enter-wisdom>button{
+    background-color: white;
+  font-family: 'Varta', sans-serif;
+  font-size: large;
+  max-width: 200px;
+}
+
+#enter-wisdom>button:hover {
+  background-color:  rgb(142, 159, 170);
+  color: white
+}
+
+#enter-wisdom>button:hover>i{
+    color: white;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+#enter-wisdom>button:active {
+    background-color: rgb(86, 106, 119);
+    color: white;
+  }
+
+input.alerted {
+  border: solid 2px rgb(148, 0, 0);
+}
+
+#enter-wisdom > i.alerted {
+  display: inline-block;
+  color: rgb(148, 0, 0);
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+#wisdom {
+    font-family: 'Varta', sans-serif;
+    font-size: large;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    padding: 20px;
+    grid-gap: 20px;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+
+.delete{
+    grid-area: x-icon;
+    color: gray;
+}
+
+.delete:hover{
+cursor: pointer;
+color: rgb(68, 64, 41);
+}
+
+.wisdom-item{
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    background-color: rgba(145, 135, 87, 0.253);
+    grid-template-areas: "text x-icon";
+    padding: 5%;
+}
+
+.wisdom-item:hover{
+    background-color: rgb(175, 188, 196);
+    box-shadow: 2px 2px 2px 2px rgb(68, 64, 41);
+}
